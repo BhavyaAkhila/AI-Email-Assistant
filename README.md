@@ -91,21 +91,3 @@ You can also provide your prompt in your **native language** and the AI will gen
 | `/api/ai/save` | POST | Save a generated email |
 | `/api/emails` | GET | View saved emails |
 
-## Project Structure 📁
-
-```text
-AI-Email-Assistant/
-│
-├── assistant/              # Spring Boot Backend
-│   ├── src/
-│   ├── pom.xml
-│   └── mvnw.cmd
-│
-├── frontend/               # React Frontend
-│
-├── README.md
-└── .gitignore
-```
-
-
-giving the repository a ⭐ on GitHub.
