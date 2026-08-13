@@ -108,20 +108,4 @@ AI-Email-Assistant/
 ```
 
 
-## Security 🔒
-
-API keys, database passwords, and JWT secrets are managed using **environment variables** and are **not stored in the repository**.
-
-## Future Enhancements 🚀
-
-- Gmail integration
-- Browser extension
-- Email summarization
-- Smart email replies
-- Voice-based email generation
-- Support for more languages
-
-
-## ⭐ Support
-
-If you found this project useful, consider giving the repository a ⭐ on GitHub.
+giving the repository a ⭐ on GitHub.
