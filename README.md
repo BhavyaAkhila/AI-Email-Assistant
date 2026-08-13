@@ -12,9 +12,8 @@ An AI-powered email assistant that helps users create professional emails quickl
 - 💾 **Save Emails** – Save generated emails for future use
 - 🔍 **Search Emails** – Search previously saved emails
 - 📋 **Copy to Clipboard** – Copy generated emails instantly
-- 📄 **Export as PDF** – Export emails as PDF
 - 🔐 **JWT Authentication** – Secure user registration and login
-- 🗄️ **MySQL Database** – Store users and generated emails securely
+
 
 ## Tech Stack 🛠️
 
