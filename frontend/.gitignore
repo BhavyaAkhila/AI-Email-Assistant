@@ -1,0 +1,1 @@
+node_modules/\ndist/\nbuild/\n\n# Env files\n.env\n.env.local\n.env.*\n\n# Logs\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\n\n# IDE\n.vscode/\n.idea/\n*.iml\n\n# OS files\n.DS_Store\nThumbs.db\ndesktop.ini\n
