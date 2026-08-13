@@ -1,69 +1,93 @@
-AI Email Assistant
+# 🤖 AI Email Assistant
 
-Features:
-- AI email generation
-- Multiple tones
-- Multiple lengths
-- Regenerate email
-- Save emails
-- Search previous emails
-- JWT authentication
-- User registration/login
-- MySQL persistence
-- REST API
-- PDF export
+An AI-powered email assistant that helps users create professional emails quickly using simple prompts. It supports multiple tones, different email lengths, native-language prompts, and saved email management.
 
-Technology:
-- Java
-- Spring Boot (4.x)
-- Spring Security
-- JWT
-- MySQL
-- Frontend: separate project (React / Vite / Angular — not detected in this repository)
-- Gemini API (Generative Language API)
+## Features ✨
+
+- 🤖 **AI Email Generation** – Generate professional emails from simple prompts
+- 🌐 **Native Language Prompts** – Give prompts in your native language and generate professional emails
+- 🎨 **Multiple Tones** – Professional, Friendly, Formal, Apology, Thank You, and Follow-up
+- 📏 **Multiple Lengths** – Short, Medium, and Long emails
+- 🔄 **Regenerate Email** – Generate a new version of an email instantly
+- 💾 **Save Emails** – Save generated emails for future use
+- 🔍 **Search Emails** – Search previously saved emails
+- 📋 **Copy to Clipboard** – Copy generated emails instantly
+- 🔐 **JWT Authentication** – Secure user registration and login
+
+
+## Tech Stack 🛠️
+
+- **Frontend:** React
+- **Backend:** Spring Boot
+- **AI:** Google Gemini API
+- **Database:** MySQL
+- **Authentication:** JWT
+- **Build Tool:** Maven
+- **API Testing:** Postman
+- **Version Control:** Git & GitHub
+
+## Prerequisites 📋
+
+- Java 25+
 - Maven
-- Git/GitHub
+- Node.js and npm
+- MySQL 8+
+- Google Gemini API Key
 
-Project structure (backend):
-- assistant/ - Spring Boot backend
-  - src/main/java - Java sources
-  - src/main/resources - application.properties files and resources
-  - pom.xml - Maven build
-  - mvnw, mvnw.cmd, .mvn/ - Maven wrapper (keep committed)
+## Installation & Setup ⚙️
 
-Local setup (backend):
-1. Create a local MySQL database, e.g. `email_assistant`.
-2. Create a `.env` or set environment variables described below.
-3. From the `assistant` folder run:
-   - ./mvnw spring-boot:run (Linux/macOS)
-   - mvnw.cmd spring-boot:run (Windows)
+Clone the repository:
 
-Local setup (frontend):
-- The frontend is a separate project and is not included in this repository. Configure its API URL with an environment variable such as `VITE_API_URL` (Vite), or `REACT_APP_API_URL` (Create React App). Example: VITE_API_URL=http://localhost:8097
+```bash
+git clone https://github.com/BhavyaAkhila/AI-Email-Assistant.git
+cd AI-Email-Assistant
+```
 
-Required environment variables (backend):
-- DATABASE_URL (optional) - e.g. jdbc:mysql://localhost:3306/email_assistant
-- DATABASE_USERNAME - database user
-- DATABASE_PASSWORD - database password
-- JWT_SECRET - JWT secret (must be at least 32 bytes / 256 bits)
-- JWT_EXPIRATION (optional) - token lifetime in ms (default 86400000)
-- GEMINI_API_KEY - API key for Gemini / Google Generative Language API
-- GEMINI_API_URL (optional) - Gemini endpoint
-- FRONTEND_URL - Frontend origin(s), comma-separated for multiple origins (default http://localhost:5173)
+### Backend Environment Variables
 
-Security and deployment notes:
-- Do NOT commit real API keys, passwords, or JWT secrets to source control.
-- Use environment variables or a secrets manager in production.
-- Keep the Maven wrapper (mvnw, mvnw.cmd, .mvn/) committed.
-- Do not commit `target/` or build artifacts. Backend .gitignore is in `assistant/.gitignore`.
+Configure the following environment variables:
 
-How to verify locally:
-- Ensure environment variables are set (see above).
-- Start backend with the Maven wrapper.
-- Start frontend separately and set its API URL to point to the backend.
+```text
+DATABASE_URL
+DATABASE_USERNAME
+DATABASE_PASSWORD
+JWT_SECRET
+GEMINI_API_KEY
+FRONTEND_URL
+```
 
-Deployment notes:
-- Use CI/CD to inject secrets into the runtime environment (GitHub Actions secrets, Azure Key Vault, AWS Secrets Manager, etc.).
-- Configure CORS origins via the FRONTEND_URL environment variable (supports comma-separated values).
+### Run the Backend
 
-This repository has been prepared to avoid committing secrets and to use environment-variable based configuration for production readiness.
+```bash
+cd assistant
+.\mvnw.cmd spring-boot:run
+```
+
+### Run the Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open the frontend in your browser and start generating emails.
+
+## Example Prompt 🚀
+
+```text
+Write an email to my professor asking for an extension on my assignment.
+```
+
+You can also provide your prompt in your **native language** and the AI will generate a professional email based on your request.
+
+## Key API Endpoints 📡
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/auth/register` | POST | Register a new user |
+| `/api/auth/login` | POST | Login and receive JWT |
+| `/api/ai/generate` | POST | Generate an AI-powered email |
+| `/api/ai/save` | POST | Save a generated email |
+| `/api/emails` | GET | View saved emails |
+
