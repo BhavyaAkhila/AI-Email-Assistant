@@ -1,18 +1,20 @@
 # 🤖 AI Email Assistant
 
-An AI-powered email assistant that helps users generate professional emails quickly from simple prompts. It supports different tones, email lengths, multiple languages, and allows users to save and manage their generated emails.
+An AI-powered email assistant that helps users create professional emails quickly using simple prompts. It supports multiple tones, different email lengths, native-language prompts, and saved email management.
 
 ## Features ✨
 
-- **🤖 AI Email Generation** – Generate professional emails from simple prompts
-- **🌐 Native Language Prompts** – Give prompts in your native language and generate polished emails
-- **🎨 Multiple Tones** – Professional, Friendly, Formal, Apology, Thank You, and Follow-up
-- **📏 Multiple Lengths** – Generate Short, Medium, or Long emails
-- **🔄 Regenerate Email** – Quickly generate a different version of an email
-- **💾 Save Emails** – Save generated emails for future use
-- **🔍 Search Emails** – Easily find previously saved emails
-- **📋 Copy to Clipboard** – Copy generated emails instantly
-- **🔐 User Authentication** – Secure registration and login using JWT
+- 🤖 **AI Email Generation** – Generate professional emails from simple prompts
+- 🌐 **Native Language Prompts** – Give prompts in your native language and generate professional emails
+- 🎨 **Multiple Tones** – Professional, Friendly, Formal, Apology, Thank You, and Follow-up
+- 📏 **Multiple Lengths** – Short, Medium, and Long emails
+- 🔄 **Regenerate Email** – Generate a new version of an email instantly
+- 💾 **Save Emails** – Save generated emails for future use
+- 🔍 **Search Emails** – Search previously saved emails
+- 📋 **Copy to Clipboard** – Copy generated emails instantly
+- 📄 **Export as PDF** – Export emails as PDF
+- 🔐 **JWT Authentication** – Secure user registration and login
+- 🗄️ **MySQL Database** – Store users and generated emails securely
 
 ## Tech Stack 🛠️
 
@@ -22,72 +24,105 @@ An AI-powered email assistant that helps users generate professional emails quic
 - **Database:** MySQL
 - **Authentication:** JWT
 - **Build Tool:** Maven
-- **Testing:** Postman
+- **API Testing:** Postman
 - **Version Control:** Git & GitHub
 
 ## Prerequisites 📋
 
 - Java 25+
 - Maven
-- Node.js & npm
+- Node.js and npm
 - MySQL 8+
 - Google Gemini API Key
 
 ## Installation & Setup ⚙️
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/BhavyaAkhila/AI-Email-Assistant.git
-   cd AI-Email-Assistant
+Clone the repository:
 
-Configure the backend environment variables
+```bash
+git clone https://github.com/BhavyaAkhila/AI-Email-Assistant.git
+cd AI-Email-Assistant
+```
 
-Set the following variables:
+### Backend Environment Variables
 
+Configure the following environment variables:
+
+```text
 DATABASE_URL
 DATABASE_USERNAME
 DATABASE_PASSWORD
 JWT_SECRET
 GEMINI_API_KEY
 FRONTEND_URL
+```
 
-Run the backend
+### Run the Backend
 
+```bash
 cd assistant
-./mvnw spring-boot:run
+.\mvnw.cmd spring-boot:run
+```
 
-Run the frontend
+### Run the Frontend
 
+```bash
 cd frontend
 npm install
 npm run dev
+```
+
 Open the frontend in your browser and start generating emails.
-Example Prompt 🚀
-"Write an email to my professor asking for an extension on my assignment."
 
-You can also provide the prompt in your native language, and the AI can generate a professional email based on your request.
+## Example Prompt 🚀
 
-Key API Endpoints 📡
-Endpoint	Method	Description
-/api/auth/register	POST	Register a new user
-/api/auth/login	POST	Login and receive JWT
-/api/ai/generate	POST	Generate an AI-powered email
-/api/ai/save	POST	Save a generated email
-/api/emails	GET	View saved emails
-Project Structure 📁
+```text
+Write an email to my professor asking for an extension on my assignment.
+```
+
+You can also provide your prompt in your **native language** and the AI will generate a professional email based on your request.
+
+## Key API Endpoints 📡
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/auth/register` | POST | Register a new user |
+| `/api/auth/login` | POST | Login and receive JWT |
+| `/api/ai/generate` | POST | Generate an AI-powered email |
+| `/api/ai/save` | POST | Save a generated email |
+| `/api/emails` | GET | View saved emails |
+
+## Project Structure 📁
+
+```text
 AI-Email-Assistant/
-├── assistant/        # Spring Boot Backend
-├── frontend/         # React Frontend
+│
+├── assistant/              # Spring Boot Backend
+│   ├── src/
+│   ├── pom.xml
+│   └── mvnw.cmd
+│
+├── frontend/               # React Frontend
+│
 ├── README.md
 └── .gitignore
-Security 🔒
+```
 
-API keys, database passwords, and JWT secrets are managed using environment variables and are not stored in the repository.
 
-Future Enhancements 🚀
-Gmail integration
-Browser extension
-Email summarization
-Smart email replies
-Voice-based email generation
-Support for more languages
+## Security 🔒
+
+API keys, database passwords, and JWT secrets are managed using **environment variables** and are **not stored in the repository**.
+
+## Future Enhancements 🚀
+
+- Gmail integration
+- Browser extension
+- Email summarization
+- Smart email replies
+- Voice-based email generation
+- Support for more languages
+
+
+## ⭐ Support
+
+If you found this project useful, consider giving the repository a ⭐ on GitHub.
