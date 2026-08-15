@@ -91,3 +91,16 @@ You can also provide your prompt in your **native language** and the AI will gen
 | `/api/ai/save` | POST | Save a generated email |
 | `/api/emails` | GET | View saved emails |
 
+## Screenshots 📸
+
+### 🔐 Login
+![Login](screenshots/login.png.png)
+
+### 🏠 Dashboard
+![Dashboard](screenshots/dashboard.png.png)
+
+### ✨ Generate Email
+![Generate Email](screenshots/generate%20email.png.png)
+
+### 📧 Generated Email
+![Generated Email](screenshots/generated%20email.png.png)
